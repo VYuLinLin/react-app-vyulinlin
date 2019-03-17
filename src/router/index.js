@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
-import {Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Home from '@/views/home'
 
-export default class RouterView extends Comment {
-  constructor(props) {
-    super(props)
-  }
+export default class RouterView extends Component {
   render() {
     return (
-      <div class="router-view">
+      <div className="router-view">
         <Router>
-          <Route path="/home" component={() => import(/* webpackChunkName: "index" */ '@/Index')}></Route>
+          <Route path="/" component={Home}></Route>
         </Router>
       </div>
     )
